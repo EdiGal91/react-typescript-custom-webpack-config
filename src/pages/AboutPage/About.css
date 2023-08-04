@@ -1,0 +1,35 @@
+/* Common styles for both light and dark modes */
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #333;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Light mode styles */
+.light-mode .about-container {
+  background-color: white;
+}
+
+.light-mode .about-container h1 {
+  color: #333;
+}
+
+.light-mode .about-container p {
+  color: #555;
+}
+
+/* Dark mode styles */
+.dark-mode .about-container {
+  background-color: #222; /* Adjust the background color to a darker shade */
+  color: white;
+}
+
+.dark-mode .about-container h1 {
+  color: #ddd;
+}
+
+.dark-mode .about-container p {
+  color: #aaa;
+}

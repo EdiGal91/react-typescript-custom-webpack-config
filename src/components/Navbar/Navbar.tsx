@@ -1,14 +1,17 @@
 import React, { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+import { useTheme } from "../../theme/useTheme";
 
 interface NavbarProps {
   children?: ReactNode;
 }
 
 const Navbar: React.FC<NavbarProps> = ({ children }) => {
+  const { theme, toggleTheme } = useTheme();
+
   return (
-    <div>
+    <div className={`${theme}-mode`}>
       <nav className="navbar">
         <ul className="nav-list">
           <li className="nav-item">
@@ -22,6 +25,9 @@ const Navbar: React.FC<NavbarProps> = ({ children }) => {
             </Link>
           </li>
         </ul>
+        <button onClick={toggleTheme} className="mode-toggle-button">
+          Toggle Mode
+        </button>
       </nav>
     </div>
   );

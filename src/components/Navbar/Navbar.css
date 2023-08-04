@@ -1,7 +1,7 @@
-/* Navbar.css */
+/* Common styles for both light and dark modes */
 .navbar {
-  background-color: #333;
   padding: 1rem;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .nav-list {
@@ -19,11 +19,62 @@
 
 .nav-link {
   text-decoration: none;
-  color: white;
   font-weight: bold;
   transition: color 0.3s ease-in-out;
 }
 
 .nav-link:hover {
   color: #66ccff;
+}
+
+/* Light mode styles */
+.light-mode .navbar {
+  background-color: white;
+}
+
+.light-mode .nav-link {
+  color: black;
+}
+
+.light-mode .nav-link:hover {
+  color: #0066cc;
+}
+
+.light-mode .mode-toggle-button {
+  color: black; /* Light mode text color */
+}
+
+.light-mode .mode-toggle-button:hover {
+  color: #66ccff;
+}
+
+/* Dark mode styles */
+.dark-mode .navbar {
+  background-color: #333;
+}
+
+.dark-mode .nav-link {
+  color: white;
+}
+
+.dark-mode .nav-link:hover {
+  color: #66ccff;
+}
+
+.dark-mode .mode-toggle-button {
+  color: white; /* Dark mode text color */
+}
+
+.dark-mode .mode-toggle-button:hover {
+  color: #66ccff;
+}
+
+/* Mode toggle button */
+.mode-toggle-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+  margin-left: auto;
 }
